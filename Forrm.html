@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>تواصل معنا</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tryy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="FormP.css">
+
+    <script>
+        function Validation() {
+            let name = document.forms["Form1"]["Yourname"].value;
+            if (name.trim() === "") {
+                alert("Empty field is not accepted");
+                return false; }
+            // Check if the name contains only letters and spaces
+            if (!/^[a-zA-Z\u0600-\u06FF\s]+$/.test(name)) {
+                alert("Only letters are allowed in 'الاسم' area");
+                return false;} }
+    </script>
+</head>
+<body class="bodyy">
+    <div class="topnav" id="myTopnav">
+        <a href="Forrm.html" class="active">تواصل<br>معنا</a>
+        <a href="Namelist.html">الفريق</a>
+      <a href="king.html">الملوك</a>
+      <a href="vision.html">رؤية المملكة</a>
+      <a href="tourism.html">السياحة</a>
+      <a href="index.html">الرئيسية</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+<h2>تواصل معنا</h2>
+<h1 style="font-size:15px;color:#333333a1;text-align:center;">رجاءً قم بتعبئة الحقول المطلوبة</h1>
+
+  <form
+        name="Form1"
+        action="Forrm.html"
+        method="post"
+        onsubmit="return Validation()">
+    
+        <label for="Yourname">:الاسم</label>
+        <input type="text" id="Yourname" name="Yourname" placeholder="أدخل اسمك">
+
+        <label for="email">:البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="أدخل البريد الإلكتروني">
+       <br><br>
+       
+        <label for="Yourname">:الجنس</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">أنثى</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">ذكر</label>
+        <br><br>
+
+        <label for="message">:رسالتك</label>
+        <textarea id="message" name="message" rows="4" placeholder="أدخل رسالتك"></textarea>
+
+        <button type="submit">إرسال</button>
+    </form>
+                    
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+</html>

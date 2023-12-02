@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Nameliist.css">
+    <link rel="stylesheet" href="tryy.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <title>فريق الإعداد</title>
+<style>
+    
+</style>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="Forrm.html" class="active">تواصل<br>معنا</a>
+        <a href="Namelist.html">الفريق</a>
+        <a href="king.html">الملوك</a>
+        <a href="vision.html">رؤية المملكة</a>
+        <a href="tourism.html">السياحة</a>
+        <a href="index.html">الرئيسية</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+     
+   
+        <h1>اعضــاء الفــريق</h1>
+        <div id="names" class="div2"></div>
+
+
+        <script>
+             team = [
+                'ريناد محمد الشمراني',
+                'لمى عيسى هملان',
+                'لمى مسعد العنزي',
+                'سارة زياد مدني'];
+    
+            team.sort(() => Math.random() - 0.5);
+            team.forEach(m => {
+                names.innerHTML += '<p>' + m;
+            });
+        </script>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    </body>
+</html>
